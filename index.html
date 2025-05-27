@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextAnime - Discover Top Anime</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-dragon"></i>
+                <h1>NextAnime</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active" data-category="top">Top Anime</a></li>
+                    <li><a href="#" data-category="airing">Currently Airing</a></li>
+                    <li><a href="#" data-category="upcoming">Upcoming</a></li>
+                    <li><a href="#" data-category="movie">Movies</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search anime..." id="search-input">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <button id="menu-toggle" class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Discover the Best Anime</h2>
+                <p>Find your next favorite series or movie from thousands of titles</p>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="container">
+                <div class="filter-group">
+                    <label for="type-filter">Type:</label>
+                    <select id="type-filter">
+                        <option value="all">All</option>
+                        <option value="tv">TV Series</option>
+                        <option value="movie">Movie</option>
+                        <option value="ova">OVA</option>
+                        <option value="ona">ONA</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="genre-filter">Genre:</label>
+                    <select id="genre-filter">
+                        <option value="all">All Genres</option>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="drama">Drama</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="horror">Horror</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="romance">Romance</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-filter">Sort by:</label>
+                    <select id="sort-filter">
+                        <option value="score">Score</option>
+                        <option value="popularity">Popularity</option>
+                        <option value="title">Title</option>
+                        <option value="episodes">Episodes</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="anime-list">
+            <div class="container">
+                <h2 id="list-title">Top Anime</h2>
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Loading anime...</p>
+                </div>
+                <div class="anime-grid" id="anime-grid"></div>
+                <button class="load-more" id="load-more">Load More</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About AnimeHub</h3>
+                    <p>༼ つ ◕_◕ ༽つI love anime</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Top Anime</a></li>
+                        <li><a href="#">Seasonal Anime</a></li>
+                        <li><a href="#">Genres</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 NextAnime. All rights reserved. Data provided by <a href="https://myanimelist.net/" target="_blank">MyAnimeList</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="anime-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
