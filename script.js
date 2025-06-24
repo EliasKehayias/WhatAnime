@@ -142,17 +142,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (genre !== 'all') {
-            // Note: Jikan API doesn't support genre filtering in top endpoint
-            // This would require using the search endpoint with genre_id
-            // For simplicity, we'll just show a message
             alert('Genre filtering requires using the search feature. Please use the search box for genre filtering.');
             return;
         }
         
         if (sort !== 'score') {
-            // Jikan API doesn't support sorting in top endpoint
-            // We would need to fetch all and sort client-side
-            // For simplicity, we'll just show a message
             alert('Sorting requires client-side implementation. Currently sorted by score as provided by the API.');
             return;
         }
